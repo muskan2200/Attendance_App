@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/md_divider_black">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_divider_black"
+    >
+    <ScrollView
+        android:background="@color/md_divider_black"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Spinner
+                    style="@style/spinner_style"
+                    android:layout_weight="0.3"
+                    android:id="@+id/departmentSpinner"
+                    android:layout_margin="5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_weight="0.4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" >
+                    <EditText
+                        android:inputType="number"
+                        android:layout_gravity="center"
+                        android:hint="RollNo."
+                        android:id="@+id/rollNoInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </android.support.design.widget.TextInputLayout>
+                <Spinner
+                    style="@style/spinner_style"
+                    android:layout_weight="0.3"
+                    android:id="@+id/batchSpinner"
+                    android:layout_margin="5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+           <Button
+               android:layout_marginRight="30dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginTop="20dp"
+               android:id="@+id/studentLogin"
+               android:text="LOGIN"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

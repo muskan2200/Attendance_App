@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.ymcaapp.sbsdevs.collegeattendanceapp.AttendanceScreenActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/noDataText"
+        android:layout_centerInParent="true"
+        android:textSize="30dp"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:id="@+id/toolbarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"/>
+    </LinearLayout>
+
+
+    <ListView
+        android:dividerHeight="3dp"
+        android:layout_below="@+id/toolbarContainer"
+        android:scrollbars="none"
+        android:id="@+id/studentRollList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/allAtendanceGivenLayout"/>
+    <LinearLayout
+        android:id="@+id/allAtendanceGivenLayout"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/allPresent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ALL PRESENT"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

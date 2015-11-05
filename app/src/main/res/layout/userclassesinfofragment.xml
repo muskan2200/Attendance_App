@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_divider_black">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/teacherProfilePic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/picCarousel"
+            android:layout_weight="0.6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="10dp">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/NODATATEXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ViewFlipper
+                android:visibility="invisible"
+                android:id="@+id/viewFlipper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autoStart="true"
+                android:flipInterval="2000">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/attendancePicsView1"
+                    android:background="@drawable/attendancetaking"
+                    android:backgroundTint="#55000000"
+                    android:backgroundTintMode="src_over"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/attendancePicsView2"
+                    android:background="@drawable/attendancetaking2"
+                    android:backgroundTint="#55000000"
+                    android:backgroundTintMode="src_over"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/attendancePicsView3"
+                    android:background="@drawable/attendancetaking3"
+                    android:backgroundTint="#55000000"
+                    android:backgroundTintMode="src_over"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/attendancePicsView4"
+                    android:background="@drawable/attendancetaking4"
+                    android:backgroundTint="#55000000"
+                    android:backgroundTintMode="src_over"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/attendancePicsView5"
+                    android:background="@drawable/attendappback"
+                    android:backgroundTint="#55000000"
+                    android:backgroundTintMode="src_over"/>
+            </ViewFlipper>
+        </LinearLayout>
+
+            <ListView
+                android:layout_weight="0.4"
+                android:elevation="10dp"
+                android:layout_below="@+id/teacherProfilePic"
+                android:id="@+id/userClassesListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:scrollbars="vertical"
+                />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

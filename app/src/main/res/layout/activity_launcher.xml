@@ -1,0 +1,62 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.ymcaapp.sbsdevs.collegeattendanceapp.Launcher"
+    android:background="@android:color/black"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#55000000"
+        android:alpha="2">
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/app_name_text"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+            <com.romainpiel.shimmer.ShimmerTextView
+                android:textColor="@android:color/white"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/app_name_text"
+                android:layout_centerInParent="true"
+                android:text="STUDENT'S MASTER"/>
+
+
+
+    </RelativeLayout>
+
+  <LinearLayout
+      android:layout_gravity="bottom"
+      android:id="@+id/buttonsLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_alignParentBottom="true"
+      android:layout_margin="10dp">
+
+      <Button
+          android:id="@+id/startLogin"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:text="@string/loginButtonHint"/>
+      <Button
+          android:id="@+id/startLoginStudent"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:text="STUDENT  LOGIN"/>
+  </LinearLayout>
+
+</FrameLayout>

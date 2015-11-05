@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/mainback"
+        android:backgroundTint="#55000000"
+        android:backgroundTintMode="src_over">
+
+        <RelativeLayout
+            android:background="#55000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:id="@+id/rollNoTextView"
+                android:text="CE-2212-2K14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_below="@+id/rollNoTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkAttendance"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="MY ATTENDANCE RECOORD"
+                />
+
+            <Button
+                android:text="CONTACT TEACHERS"
+                android:layout_below="@+id/checkAttendance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/contactTeacher"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+            <Button
+                android:text="LOG OUT"
+                android:layout_below="@+id/contactTeacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/logOut"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="loginIdHint">EnterE-MailId</string>
+    <string name="loginPasswordHint">EnterPassword</string>
+    <string name="loginButtonHint">TEACHER LOGIN</string>
+    <string name="forgotPassword">Forgot Password ????</string>
+    <string name="registerNameHint">EnterFullName</string>
+    <string name="registerEmailHint">EnterE-MailId</string>
+    <string name="registerPasswordHint">EnterPassword</string>
+
+    <string name="signIn">SignIn</string>
+    <string name="register">Register</string>
+    <string name="logOut">LogOut</string>
+
+</resources>
