@@ -43,6 +43,7 @@ public class AttendanceScreenActivity extends AppCompatActivity {
     private TextView NoDataText;
     private String Department,Semester,Subject;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +71,7 @@ public class AttendanceScreenActivity extends AppCompatActivity {
         StudentListView.setAdapter(rollListAdapter);
         AllPresent = (Button)findViewById(R.id.allPresent);
         AllPresent.setTypeface(Util_Class.setNewTextStyle(getApplicationContext()));
+
 
         AllPresent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -217,7 +219,6 @@ public class AttendanceScreenActivity extends AppCompatActivity {
         Intent backRedirect = new Intent(AttendanceScreenActivity.this,Main.class);
         backRedirect.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(backRedirect);
-        return;
     }
 
 

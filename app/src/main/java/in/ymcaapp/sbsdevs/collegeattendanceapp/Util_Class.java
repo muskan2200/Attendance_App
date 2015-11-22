@@ -64,6 +64,9 @@ public class Util_Class {
             urlConnection.setRequestMethod("POST");
             urlConnection.setDoOutput(true);
             urlConnection.setDoInput(true);
+            urlConnection.setConnectTimeout(5000);
+            urlConnection.setReadTimeout(10000);
+
 
             is = new BufferedInputStream(urlConnection.getInputStream());
             java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
@@ -74,11 +77,9 @@ public class Util_Class {
         } catch (MalformedURLException e) {
             //Log.d("error", "error in getjsonfromurl MalformedUrlexception");
         }
-        catch(SocketTimeoutException r){
-            // Log.e("Socket","error in timeout");
-            r.printStackTrace();
-        }catch (IOException e){
+     catch (IOException e){
             //  Log.d("error", "error in getjsonfromurl Ioexception");
+         return null;
         }
         try {
             jsonObject = new JSONObject(jsonString);

@@ -12,7 +12,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.romainpiel.shimmer.Shimmer;
 import com.romainpiel.shimmer.ShimmerTextView;
 
-public class Launcher extends AppCompatActivity {
+public class Launcher extends AppCompatActivity  {
 
     private Button startLogin, StudentLogin;
     private SharedPrefUtil sharedPrefUtil;
@@ -38,14 +38,15 @@ public class Launcher extends AppCompatActivity {
 
         if (sharedPrefUtil.getIsLoggedIn()) {
             Intent alreadyLoginRedirect = new Intent(getApplicationContext(), Main.class);
-            alreadyLoginRedirect.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(alreadyLoginRedirect);
+            finish();
         }
 
         if (studentSharedPref.getIsLoggedIn()) {
             Intent alreadyLoginRedirect = new Intent(getApplicationContext(), StudentMain.class);
             alreadyLoginRedirect.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(alreadyLoginRedirect);
+            finish();
         }
         startLogin = (Button) findViewById(R.id.startLogin);
         startLogin.setTypeface(Util_Class.setNewTextStyle(getApplicationContext()));
